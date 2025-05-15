@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Partner.ai</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+    }
+
+    .chat-container {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .robot-img {
+      width: 40px;
+      height: 40px;
+    }
+
+    #chatBox {
+      flex-grow: 1;
+      overflow-y: auto;
+      padding: 10px;
+      margin: 10px 0;
+      background: black;
+      color : white;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .message {
+      color: black;
+      padding: 10px 15px;
+      margin: 5px 5px;
+      border-radius: 15px;
+      max-width: 80%;
+    }
+
+    .user {
+      align-self: flex-end;
+      background-color: #dff9fb;
+    }
+
+    .bot {
+      align-self: flex-start;
+      background-color: #f1f2f6;
+    }
+
+    .input-area {
+      display: flex;
+      gap: 5px;
+    }
+
+    input#message {
+      flex-grow: 1;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      background-color: #3498db;
+      color: white;
+      cursor: pointer;
+    }
+
+    audio {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="chat-container">
+    <div class="header">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712107.png" class="robot-img" alt="Bot">
+      <h1>Partner.ai</h1>
+    </div>
+
+    <div id="chatBox"><span><br></span></div>
+
+    <div class="input-area">
+      <input type="text" id="message" placeholder="Ask me anything..." />
+      <button id="voiceToggleBtn">♀️</button>
+      <button id="sendBtn">Send</button>
+      <button id="voiceBtn">🎤</button>
+    </div>
+
+    <audio id="voice" controls></audio>
+  </div>
+
+  
+  <script src="script1.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

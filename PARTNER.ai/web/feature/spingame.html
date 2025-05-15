@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Spin the Wheel</title>
+  <style>
+    body {
+      background: #121212;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+      font-size : 20px;
+      aligh-item: center;
+    }
+    h1{
+      margin-bottom : 5%;
+
+   }
+    #wheel {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin: 0 auto;
+      border: 8px solid #fff;
+      position: relative;
+      transition: transform 4s ease-out;
+    }
+
+    .slice {
+      width: 50%;
+      height: 50%;
+      background: #444;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: 0% 0%;
+      clip-path: polygon(0 0, 100% 0, 20% 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .slice:nth-child(odd) {
+      background: #00b894;
+    }
+
+    .slice:nth-child(even) {
+      background: #0984e3;
+    }
+
+    .spin-btn, #play-btn {
+      margin-top: 80px;
+      padding: 15px 30px;
+      font-size: 20px;
+      background: #00cec9;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+    #play-btn{
+      visibility : hidden;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎡 Spin the Wheel</h1>
+
+  <div id="wheel"></div>
+  <button class="spin-btn" onclick="spin()">SPIN</button>
+  <div id="result">Result: -</div>
+  <button id="play-btn" class="spin-btn" onclick="play()">Play?</button>
+
+  <script>
+    const options = [
+      "Flappy Bird", "Car Game", "Deadshot", "Hacker Prank",
+      "ev.io", "Tank Game", "Flying Car", "Gun Shut"
+    ];
+
+    const wheel = document.getElementById('wheel');
+
+    function createWheel() {
+      const angle = 360 / options.length;
+      for (let i = 0; i < options.length; i++) {
+        const slice = document.createElement('div');
+        slice.className = 'slice';
+        slice.style.transform = `rotate(${i * angle}deg) skewY(${90 - angle}deg)`;
+        slice.innerHTML = `<div style="transform: skewY(-${90 - angle}deg) rotate(${angle / 2}deg); transform-origin: bottom left;">${options[i]}</div>`;
+        wheel.appendChild(slice);
+      }
+    }
+
+    let totalRotation = 0;
+
+    function spin() {
+      const anglePerSlice = 360 / options.length;
+      const rand = Math.floor(Math.random() * options.length);
+      const stopAngle = rand * anglePerSlice + anglePerSlice / 2;
+      const play = document.getElementById("play-btn");
+      const fullRotations = 5 * 360;
+      totalRotation += fullRotations + (360 - stopAngle);
+
+      wheel.style.transform = `rotate(${totalRotation}deg)`;
+
+      setTimeout(() => {
+        document.getElementById('result').innerText = "Result: " + options[rand];
+      }, 4000);
+        play.style.visibility = "visible",400;
+    }
+	
+    createWheel();
+  </script>
+
+</body>
+</html>

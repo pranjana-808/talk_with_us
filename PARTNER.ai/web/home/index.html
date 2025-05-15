@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-colors duration-500">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partner.ai</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Smooth transitions */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-blue-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-500">
+
+  <!-- Navbar -->
+  <nav class="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center text-xl font-bold">Partner</div>
+        <div class="hidden md:flex space-x-6">
+          <a href="/PARTNER.ai/web/about/about.html" class="hover:text-gray-200 transition">About</a>
+          <a href="/PARTNER.ai/web/feature/feature.html" class="hover:text-gray-200 transition">feature</a>
+          <a href="/PARTNER.ai/web/login/login.html" class="hover:text-gray-200 transition">Login</a>
+          <a href="/PARTNER.ai/web/signup/sign.html" class="bg-white text-purple-600 px-4 py-1 rounded hover:bg-gray-100">Sign Up</a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-white focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <a href="/PARTNER.ai/web/about/about.html" class="block hover:text-gray-200">About</a>
+      <a href="/PARTNER.ai/web/feature/feature.html" class="block hover:text-gray-200">Presentation</a>
+      <a href="/PARTNER.ai/web/login/login.html" class="block hover:text-gray-200">Login</a>
+      <a href="/PARTNER.ai/web/signup/sign.html" class="block bg-white text-purple-600 px-4 py-1 rounded hover:bg-gray-100 w-max">Sign Up</a>
+    </div>
+  </nav>
+
+  <!-- Welcome Section -->
+  <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 dark:from-gray-800 dark:via-gray-900 dark:to-gray-950 px-6 py-16">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Text Area -->
+      <div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Welcome to Partner.ai 👋</h1>
+        <p class="text-lg md:text-xl leading-relaxed">
+          Take a deep breath. You're in a safe space. Whether you're overwhelmed, excited, confused, or just need to talk — Partner.ai is here for you.
+        </p>
+        <p class="text-lg md:text-xl mt-4">
+          Relax, open up, and let's have a real conversation. You're not alone.
+        </p>
+        <a href="\PARTNER.ai\backend\python_flask_int_ai\templates\index.html" class="inline-block mt-8 bg-blue-600 dark:bg-purple-600 text-white px-6 py-3 rounded-full text-lg shadow-lg hover:bg-blue-700 dark:hover:bg-purple-700 transition">
+          Start Chatting
+        </a>
+      </div>
+
+      <!-- Poster Image -->
+      <div class="w-full max-w-sm mx-auto">
+        <img src="\PARTNER.ai\web\home\img.jpg" alt="Partner.ai Poster" class="rounded-2xl shadow-xl object-cover w-full h-auto">
+      </div>
+
+    </div>
+  </section>
+
+
+   <section class="min-h-screen bg-gray-900 text-white px-6 py-16">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-12">Who Would You Like to Talk To?</h2>
+
+    <!-- Options Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      
+      <!-- Option 1: Father -->
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition duration-300">
+        <img src="\PARTNER.ai\web\home\father.jpg" alt="Father" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Father</h3>
+          <p class="text-gray-400">Need advice or just a chat with your father? We've got you covered.</p>
+        </div>
+      </div>
+
+      <!-- Option 2: Mother -->
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition duration-300">
+        <img src="\PARTNER.ai\web\home\mother.jpg" alt="Mother" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Mother</h3>
+          <p class="text-gray-400">Talk to your mother, get comfort and support whenever needed.</p>
+        </div>
+      </div>
+
+      <!-- Option 3: Brother -->
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition duration-300">
+        <img src="\PARTNER.ai\web\home\bro.jpg" alt="Brother" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Brother</h3>
+          <p class="text-gray-400">Need advice from your brother? We are here to make that happen.</p>
+        </div>
+      </div>
+
+      <!-- Option 4: Sister -->
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition duration-300">
+        <img src="\PARTNER.ai\web\home\sister.jpg" alt="Sister" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Sister</h3>
+          <p class="text-gray-400">Get advice or chat with your sister on whatever's on your mind.</p>
+        </div>
+      </div>
+
+      <!-- Option 5: Girlfriend -->
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition duration-300">
+        <img src="\PARTNER.ai\web\home\gf.jpg" alt="Girlfriend" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Girlfriend</h3>
+          <p class="text-gray-400">Talk to your girlfriend and share your thoughts with ease.</p>
+        </div>
+      </div>
+
+      <!-- Option 6: Boyfriend -->
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition duration-300">
+        <img src="\PARTNER.ai\web\home\bf.jpg" alt="Boyfriend" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Boyfriend</h3>
+          <p class="text-gray-400">Connect with your boyfriend for a real, heartfelt conversation.</p>
+        </div>
+      </div>
+
+
+ <!-- Option 7: friend -->
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition duration-300">
+        <img src="\PARTNER.ai\web\home\friend.jpg" alt="friend" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Friend</h3>
+          <p class="text-gray-400">Connect with your friends for a real, joyful conversation.</p>
+        </div>
+      </div>
+
+ <!-- Option 8: timepass-->
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition duration-300">
+        <img src="\PARTNER.ai\web\home\timepass.jpg" alt="timepass" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Boyfriend</h3>
+          <p class="text-gray-400">just wanna talk to anyone and want to pass time only.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="min-h-screen bg-gray-800 text-white px-6 py-16">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-8">The Idea Behind Partner.ai</h2>
+    
+    <p class="text-lg md:text-xl leading-relaxed mb-8">
+      The idea for Partner.ai was born out of the desire to create a space where people could feel truly heard, understood, and supported. In today's fast-paced world, we often find ourselves overwhelmed with emotions, struggles, and challenges. Partner.ai was designed with empathy at its core to help ease the burdens of those feeling lonely or unsure, offering a friendly, understanding ear to listen, converse, and provide meaningful advice.
+    </p>
+    
+    <p class="text-lg md:text-xl leading-relaxed mb-8">
+      Whether you're looking for a moment of peace, emotional support, or just someone to chat with, Partner.ai provides a safe, non-judgmental environment. It adapts to your needs, guiding you with wisdom and care, whenever and wherever you need it.
+    </p>
+    
+    <p class="text-lg md:text-xl leading-relaxed mb-8">
+      We understand that life can sometimes feel like a lot to handle. Partner.ai aims to help you navigate through those times, offering advice with empathy, and always with your well-being in mind.
+    </p>
+
+    <a href="\PARTNER.ai\backend\python_flask_int_ai\templates\index.html" class="inline-block mt-8 bg-purple-600 text-white px-6 py-3 rounded-full text-lg shadow-lg hover:bg-purple-700 transition">
+      Start a Conversation with Partner.ai
+    </a>
+  </div>
+</section>
+
+
+
+
+<section class="bg-gray-900 text-white px-6 py-16">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-8">What People Are Saying</h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+        <p class="text-lg">"Partner.ai helped me through a tough time. I was feeling really low, and just having someone to talk to made a huge difference."</p>
+        <p class="font-semibold mt-4">— Sarah, 28</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+        <p class="text-lg">"I can't believe how quickly Partner.ai understood my feelings. It's like talking to a friend who really listens."</p>
+        <p class="font-semibold mt-4">— Michael, 35</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+        <p class="text-lg">"Having someone that empathizes with me, no matter the situation, made me feel seen and heard. Thank you, Partner.ai!"</p>
+        <p class="font-semibold mt-4">— Emma, 22</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="bg-gray-800 text-white px-6 py-16">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-8">How Partner.ai Works</h2>
+    
+    <div class="flex flex-col md:flex-row gap-8">
+      <!-- Step 1 -->
+      <div class="flex-1 bg-gray-900 p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold mb-4">Step 1: Choose Who You Want to Talk To</h3>
+        <p>Choose from a variety of options like family, friends, or loved ones to talk with.</p>
+      </div>
+      
+      <!-- Step 2 -->
+      <div class="flex-1 bg-gray-900 p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold mb-4">Step 2: Start Your Conversation</h3>
+        <p>Engage with Partner.ai in a safe and supportive space, and have meaningful conversations.</p>
+      </div>
+      
+      <!-- Step 3 -->
+      <div class="flex-1 bg-gray-900 p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold mb-4">Step 3: Receive Empathetic Support</h3>
+        <p>Receive insightful responses and emotional support whenever you need it most.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section class="bg-gray-900 text-white px-6 py-16">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-8">Frequently Asked Questions</h2>
+
+    <div class="space-y-4">
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold cursor-pointer">What is Partner.ai?</h3>
+        <p class="mt-2 text-gray-400 hidden">Partner.ai is an AI-powered platform designed to provide emotional support and friendly conversation whenever you need it.</p>
+      </div>
+      
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold cursor-pointer">Is my conversation private?</h3>
+        <p class="mt-2 text-gray-400 hidden">Yes, all conversations with Partner.ai are private and secure. Your privacy is important to us.</p>
+      </div>
+      
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold cursor-pointer">How do I start a conversation?</h3>
+        <p class="mt-2 text-gray-400 hidden">Simply click on the "Start Chatting" button, and you'll be connected to Partner.ai right away.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Toggle FAQ answers
+    document.querySelectorAll('.cursor-pointer').forEach(item => {
+      item.addEventListener('click', () => {
+        const answer = item.nextElementSibling;
+        answer.classList.toggle('hidden');
+      });
+    });
+  </script>
+</section>
+
+
+
+
+
+<section class="bg-gray-800 text-white px-6 py-16">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-8">As Seen In</h2>
+
+    <div class="flex justify-center space-x-8">
+      <img src="https://via.placeholder.com/150x50?text=Logo1" alt="Logo 1" class="h-12">
+      <img src="https://via.placeholder.com/150x50?text=Logo2" alt="Logo 2" class="h-12">
+      <img src="https://via.placeholder.com/150x50?text=Logo3" alt="Logo 3" class="h-12">
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer class="bg-gray-800 text-white px-6 py-8 text-center">
+  <p class="text-sm mb-4">© 2025 Partner.ai. All rights reserved.</p>
+  
+  <div class="mb-6">
+    <h3 class="text-xl font-semibold mb-4">Stay Updated with Partner.ai</h3>
+    <p class="text-gray-400 mb-4">Enter your email to receive updates, news, and tips directly in your inbox.</p>
+    
+    <!-- Email Input Form -->
+    <form action="#" method="POST" class="max-w-lg mx-auto">
+      <div class="flex items-center justify-center space-x-4">
+        <input type="email" name="email" placeholder="Enter your email" class="px-4 py-2 rounded-lg text-gray-900 w-2/3" required>
+        <button type="submit" class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition duration-300">Subscribe</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="mt-4 space-x-4">
+    <a href="#privacy-policy" class="text-gray-400 hover:text-white">Privacy Policy</a>
+    <a href="#terms" class="text-gray-400 hover:text-white">Terms of Use</a>
+    <a href="#contact" class="text-gray-400 hover:text-white">Contact</a>
+  </div>
+</footer>
+
+
+
+
+  <!-- JS for toggles -->
+  <script>
+    // Toggle mobile menu
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // Toggle dark mode
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
